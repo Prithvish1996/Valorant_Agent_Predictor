@@ -486,3 +486,42 @@
 2026-02-15 21:18:08 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Users\prith\IdeaProjects\Valorant_Agent_Predictor\data\interim
 2026-02-15 21:18:08 - src.data.data_loader - INFO - Attempting to load file: C:\Users\prith\IdeaProjects\Valorant_Agent_Predictor\data\interim\player_game_data.csv
 2026-02-15 21:18:08 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-02-26 19:36:37 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:36:37 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\cleaned_valorant_data.csv
+2026-02-26 19:36:37 - src.data.data_loader - ERROR - File not found: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\cleaned_valorant_data.csv
+2026-02-26 19:37:37 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:37:37 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:37:37 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:43:09 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:43:09 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:43:09 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:43:34 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:43:34 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:43:34 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:43:42 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:43:42 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:43:42 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:43:50 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:43:50 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:43:50 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:44:19 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:44:19 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:44:19 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 19:44:30 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\processed
+2026-02-26 19:44:30 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\processed\player_game_data_cleaned.csv
+2026-02-26 19:44:30 - src.data.data_loader - INFO - Successfully loaded player_game_data_cleaned.csv with 1296 rows and 13 columns
+2026-02-26 20:20:12 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-02-26 20:20:12 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-02-26 20:20:12 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-02-26 20:31:37 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-02-26 20:31:37 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-02-26 20:31:37 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-02-26 21:25:37 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-02-26 21:25:37 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-02-26 21:25:37 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-02-26 21:26:49 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-02-26 21:26:49 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-02-26 21:26:49 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-02-26 21:43:58 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-02-26 21:43:58 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-02-26 21:43:58 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
