@@ -29,9 +29,9 @@ Imported all required libraries and loaded the pre-processed training split from
 | `scipy.stats` | Statistical utilities |
 
 **Key variables set:**  
-- `PROJECT_ROOT` — resolved workspace root via `pathlib`  
-- `PROCESSED_DIR` — path to `data/processed/`  
-- `train_df` — loaded training DataFrame (shape printed as a sanity check)
+- `PROJECT_ROOT` - resolved workspace root via `pathlib`  
+- `PROCESSED_DIR` - path to `data/processed/`  
+- `train_df` - loaded training DataFrame (shape printed as a sanity check)
 
 ---
 
@@ -215,7 +215,7 @@ Saved three artefacts to the `models/` directory so the trained model can be loa
 - **Random Forest and KNN were almost tied on RMSE** (1.389 vs 1.391), but Random Forest also led on MAE and R², making it the clear overall winner.
 - **XGBoost showed the lowest Train MAE (0.404)** but a higher Test RMSE (1.466), suggesting mild overfitting compared to Random Forest.
 - **Gradient Boosting had the weakest test generalisation** (RMSE 1.474, R² 0.607) despite a competitive Train MAE (0.521).
-- **KNN was surprisingly competitive** on the test set despite being the only non-ensemble, non-gradient method — though its higher Train MAE (0.819) indicates it underfits relative to tree-based models.
+- **KNN was surprisingly competitive** on the test set despite being the only non-ensemble, non-gradient method - though its higher Train MAE (0.819) indicates it underfits relative to tree-based models.
 - Using a **multi-metric rank-sum** for model selection (Step 6) avoids the pitfall of optimising for one number at the expense of others.
 
 ---

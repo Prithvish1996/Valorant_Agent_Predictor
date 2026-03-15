@@ -821,3 +821,19 @@
 2026-03-15 12:01:40 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
 2026-03-15 12:01:40 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
 2026-03-15 12:01:40 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-03-15 13:50:48 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\external
+2026-03-15 13:50:48 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\external\agent_master_list.csv
+2026-03-15 13:50:48 - src.data.data_loader - INFO - Successfully loaded agent_master_list.csv with 26 rows and 2 columns
+2026-03-15 13:50:48 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\external\valorant_games_messy.csv
+2026-03-15 13:50:48 - src.data.data_loader - INFO - Successfully loaded valorant_games_messy.csv with 1296 rows and 19 columns
+2026-03-15 13:51:12 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Agent_Predictor\data\interim
+2026-03-15 13:51:12 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Agent_Predictor\data\interim\player_game_data.csv
+2026-03-15 13:51:12 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-03-15 14:09:06 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Player_Performance_Predictor\data\interim
+2026-03-15 14:09:06 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Player_Performance_Predictor\data\interim\player_game_data.csv
+2026-03-15 14:09:06 - src.data.data_loader - INFO - Successfully loaded player_game_data.csv with 1296 rows and 20 columns
+2026-03-15 14:10:45 - src.data.data_loader - INFO - DataLoader initialized with data directory: C:\Personel\Github\Valorant_Player_Performance_Predictor\data\external
+2026-03-15 14:10:45 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Player_Performance_Predictor\data\external\agent_master_list.csv
+2026-03-15 14:10:45 - src.data.data_loader - INFO - Successfully loaded agent_master_list.csv with 26 rows and 2 columns
+2026-03-15 14:10:45 - src.data.data_loader - INFO - Attempting to load file: C:\Personel\Github\Valorant_Player_Performance_Predictor\data\external\valorant_games_messy.csv
+2026-03-15 14:10:45 - src.data.data_loader - INFO - Successfully loaded valorant_games_messy.csv with 1296 rows and 19 columns

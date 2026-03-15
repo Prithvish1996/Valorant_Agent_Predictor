@@ -1,0 +1,12 @@
+jupyterlab
+jupyter
+ipywidgets
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+xgboost
+scipy
+joblib
+python-dotenv

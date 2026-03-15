@@ -1,0 +1,25 @@
+# Python 3.10 required
+
+# Notebook environment
+jupyterlab
+jupyter
+ipywidgets
+
+# Data handling
+numpy
+pandas
+
+# Visualisation
+matplotlib
+seaborn
+
+# Machine learning
+scikit-learn
+xgboost
+scipy
+
+# Model persistence
+joblib
+
+# Dev utilities
+python-dotenv

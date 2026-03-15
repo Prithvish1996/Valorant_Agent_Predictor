@@ -41,26 +41,26 @@ The dataset contains one row per player per game. The table below describes ever
 
 | Feature | Type | Description |
 |---|---|---|
-| `game_id` | Integer | Unique identifier for each match — row index only, not a modelling feature |
+| `game_id` | Integer | Unique identifier for each match - row index only, not a modelling feature |
 | `episode` | Integer | Valorant competitive season episode number |
 | `act` | Integer | Act within the episode (each episode has 3 acts) |
 | `rank` | Categorical | Player's competitive rank at the time of the match (e.g., `Gold 1`, `Platinum 3`) |
 | `date` | Date | Date the match was played |
 | `agent` | Categorical | Name of the agent the player selected for the match (e.g., `Cypher`, `Jett`) |
 | `map` | Categorical | Name of the map the match was played on (e.g., `Ascent`, `Bind`) |
-| `outcome` | Categorical | Match result from the player's perspective — `Win`, `Loss`, or `Draw` |
+| `outcome` | Categorical | Match result from the player's perspective - `Win`, `Loss`, or `Draw` |
 | `round_wins` | Integer | Number of rounds the player's team won |
 | `round_losses` | Integer | Number of rounds the player's team lost |
 | `kills` | Integer | Total kills secured by the player in the match |
 | `deaths` | Integer | Total times the player died in the match |
 | `assists` | Integer | Total assists (contributed to a kill without landing the final shot) |
-| `kdr` | Float | Kill/Death Ratio — `kills ÷ deaths`; values above 1.0 indicate more kills than deaths |
+| `kdr` | Float | Kill/Death Ratio - `kills / deaths`; values above 1.0 indicate more kills than deaths |
 | `avg_dmg_delta` | Float | Average damage dealt minus average damage received per round; positive = net contributor |
 | `headshot_pct` | Float | Percentage of kills secured via headshots; higher = more precise aim |
 | `avg_dmg` | Float | Average damage dealt to enemies per round |
-| `acs` | Integer | Average Combat Score — Riot's official per-round contribution metric combining damage, kills, and multi-kills |
+| `acs` | Integer | Average Combat Score - Riot's official per-round contribution metric combining damage, kills, and multi-kills |
 | `num_frag` | Integer | Number of rounds in which the player secured the first kill (opening frag) |
-| `role` | Categorical | Agent role grouping — `Duelist`, `Initiator`, `Controller`, or `Sentinel` |
+| `role` | Categorical | Agent role grouping - `Duelist`, `Initiator`, `Controller`, or `Sentinel` |
 
 
 
@@ -71,7 +71,7 @@ A two-column lookup table compiled manually from the official Valorant agent ros
 | Column | Type | Description |
 |---|---|---|
 | `Agent` | Categorical | Official agent name as it appears in the game (e.g., `Jett`, `KAY/O`) |
-| `Role` | Categorical | Role the agent belongs to — `Duelist`, `Initiator`, `Controller`, or `Sentinel` |
+| `Role` | Categorical | Role the agent belongs to - `Duelist`, `Initiator`, `Controller`, or `Sentinel` |
 
 ---
 

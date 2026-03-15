@@ -14,7 +14,7 @@ A machine learning project that predicts a Valorant player's **performance score
    - [3.3 Create and Activate the Conda Environment](#33-create-and-activate-the-conda-environment)
    - [3.4 Launch JupyterLab](#34-launch-jupyterlab)
 4. [How the Project is Organised](#4-how-the-project-is-organised)
-5. [Running the Project — Step-by-Step](#5-running-the-project--step-by-step)
+5. [Running the Project - Step-by-Step](#5-running-the-project--step-by-step)
 6. [Notebook Execution Order](#6-notebook-execution-order)
 7. [How the Docs Folder Maps to the Notebooks](#7-how-the-docs-folder-maps-to-the-notebooks)
 8. [Acknowledgements](#8-acknowledgements)
@@ -26,9 +26,9 @@ A machine learning project that predicts a Valorant player's **performance score
 | Item | Detail |
 |---|---|
 | **Goal** | Predict a player's performance score from kills, deaths, damage delta, agent, role, and win/loss margin |
-| **Target** | `performance` — an ordinal numeric score ranging from **−1 to 12** |
+| **Target** | `performance` - an ordinal numeric score ranging from **-1 to 12** |
 | **Approach** | Regression (Random Forest, Gradient Boosting, KNN, XGBoost) |
-| **Best model** | Random Forest — Test RMSE 1.389, Test R² 0.651 |
+| **Best model** | Random Forest - Test RMSE 1.389, Test R2 0.651 |
 | **Methodology** | CRISP-DM (Business Understanding → Data Understanding → Data Preparation → Modelling & Evaluation) |
 
 ---
@@ -106,7 +106,12 @@ Verify the installation worked:
 
 ```bash
 conda --version
-# Expected: conda 24.x.x or similar
+# Expected: conda 26.x.x or similar
+```
+
+Additional Note If Anaconda is already installed, run the following command to update the anaconda before creating environment
+```bash
+conda update -n base -c defaults conda
 ```
 
 ---
@@ -121,6 +126,24 @@ conda --version
 cd path\to\Valorant_Player_Performance_Predictor
 ```
 
+> **Using Anaconda Prompt (Windows: if Anaconda was not added to PATH)**
+>
+> If you did not tick "Add Anaconda to my PATH" during installation, standard Command Prompt and PowerShell will not recognise `conda` commands. Use **Anaconda Prompt** instead it is installed automatically with Anaconda.
+>
+> **How to open it:**
+> 1. Press the **Windows key**, type **Anaconda Prompt**, and click the result.
+>
+> **Navigate to the project folder inside Anaconda Prompt:**
+> ```
+> cd path\to\Valorant_Player_Performance_Predictor
+> ```
+> Replace `path\to\` with the actual location where you extracted the ZIP. For example:
+> ```
+> cd C:\Users\YourName\Downloads\Valorant_Player_Performance_Predictor
+> ```
+>
+> Once you are inside the project directory, continue with all the steps in sections 3.3 onwards using the same Anaconda Prompt window.
+
 ---
 
 ### 3.3 Create and Activate the Conda Environment
@@ -134,6 +157,19 @@ conda env create -f environment.yml
 # Activate it (needed every session)
 conda activate valorant_predictor
 ```
+
+> **If the command above gets stuck** (this can happen on some systems due to conda's solver), use this alternative instead:
+>
+> ```bash
+> # Step 1 - Create a blank environment with Python 3.10
+> conda create -n valorant_predictor python=3.10
+>
+> # Step 2 - Activate it
+> conda activate valorant_predictor
+>
+> # Step 3 - Install all packages via pip
+> pip install -r requirements.txt
+> ```
 
 To verify all packages installed correctly:
 
@@ -158,7 +194,7 @@ conda env remove -n valorant_predictor
 
 ### 3.4 Open the Project in VS Code (Recommended)
 
-VS Code can run Jupyter notebooks natively and integrates directly with conda environments — no browser required.
+VS Code can run Jupyter notebooks natively and integrates directly with conda environments - no browser required.
 
 **Install VS Code:**  
 https://code.visualstudio.com/download
@@ -168,8 +204,8 @@ https://code.visualstudio.com/download
 1. Open VS Code.
 2. Go to the **Extensions** panel (`Ctrl+Shift+X`).
 3. Search for and install:
-   - **Python** (by Microsoft) — `ms-python.python`
-   - **Jupyter** (by Microsoft) — `ms-toolsai.jupyter`
+   - **Python** (by Microsoft) - `ms-python.python`
+   - **Jupyter** (by Microsoft) - `ms-toolsai.jupyter`
 
 **Open the project folder:**
 
@@ -203,25 +239,25 @@ Your browser will open at `http://localhost:8888`. Navigate to the `notebooks/` 
 
 This project follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining) framework. Each phase has:
 
-- A **documentation file** in `docs/` — explains the *why* and *what* behind every decision.
-- A **notebook** in `notebooks/` — the executable *how*, with code and outputs.
+- A **documentation file** in `docs/` - explains the *why* and *what* behind every decision.
+- A **notebook** in `notebooks/` - the executable *how*, with code and outputs.
 
 The two always go together. Read the doc first to understand the goal of each phase, then run the notebook to execute it.
 
 ---
 
-## 5. Running the Project — Step-by-Step
+## 5. Running the Project - Step-by-Step
 
 Follow these steps in order on a freshly cloned repository. Each step depends on the outputs of the previous one.
 
-### Step 1 — Read the Business Understanding document
+### Step 1 - Read the Business Understanding document
 
 **File:** `docs/0_buisness_understanding.md`  
 **No notebook for this phase.**
 
 Read this document first. It explains:
 - What Valorant is and why this prediction task is useful.
-- The dataset source (Kaggle — 1,000 match records).
+- The dataset source (Kaggle - 1,000 match records).
 - Why a **messy version** of the dataset (`valorant_games_messy.csv`) was intentionally created to simulate real-world data quality problems.
 - The Agent Master List and how it is used.
 
@@ -229,7 +265,7 @@ Read this document first. It explains:
 
 ---
 
-### Step 2 — Run Notebook 1: Data Understanding
+### Step 2 - Run Notebook 1: Data Understanding
 
 **Doc:** `docs/1_data_understanding.md`  
 **Notebook:** `notebooks/1_data_understanding.ipynb`  
@@ -240,15 +276,15 @@ Open the notebook and run all cells top-to-bottom (`Run → Run All Cells`). Thi
 
 1. Loads the raw messy dataset and the agent master list.
 2. Merges them on agent name to add a `role` column to each match record.
-3. Profiles data quality — missing values, invalid categories, impossible numeric values, inconsistent outcomes.
+3. Profiles data quality - missing values, invalid categories, impossible numeric values, inconsistent outcomes.
 4. Produces early visualisations (agent distribution, role imbalance, numeric feature histograms).
 5. Saves the merged (but not yet cleaned) data to `data/interim/player_game_data.csv`.
 
-> Read `docs/1_data_understanding.md` alongside the notebook — it explains every quality issue found and why it matters for the next phase.
+> Read `docs/1_data_understanding.md` alongside the notebook - it explains every quality issue found and why it matters for the next phase.
 
 ---
 
-### Step 3 — Run Notebook 2: Data Preparation
+### Step 3 - Run Notebook 2: Data Preparation
 
 **Doc:** `docs/2_data_preparation.md`  
 **Notebook:** `notebooks/2_data_preparation.ipynb`  
@@ -269,7 +305,7 @@ Run all cells top-to-bottom. This notebook:
 
 ---
 
-### Step 4 — Run Notebook 3: Modelling and Evaluation
+### Step 4 - Run Notebook 3: Modelling and Evaluation
 
 **Doc:** `docs/3_modelling_and_evaluation.md`  
 **Notebook:** `notebooks/3_modelling_and_evaluation.ipynb`  
@@ -319,7 +355,7 @@ notebooks/3_modelling_and_evaluation.ipynb
 1. Read the **doc** first to understand the goal and decisions.
 2. Open the **notebook** and run it cell by cell, referring back to the doc for context on each step.
 
-The doc files follow the same step numbering as the notebook cells — e.g., "Step 3" in `docs/2_data_preparation.md` corresponds directly to the "Step 3" section in `notebooks/2_data_preparation.ipynb`.
+The doc files follow the same step numbering as the notebook cells - e.g., "Step 3" in `docs/2_data_preparation.md` corresponds directly to the "Step 3" section in `notebooks/2_data_preparation.ipynb`.
 
 ---
 
@@ -327,15 +363,15 @@ The doc files follow the same step numbering as the notebook cells — e.g., "St
 
 | Person / Tool | Role / Contribution |
 |---|---|
-| **Pieter Zielstra** | Mentor and Study Coach — guidance throughout the project lifecycle |
-| **Deepak Tunuguntla** | Mentor and Study Coach — feedback on methodology and implementation |
-| **Saxion University of Applied Sciences** | Academic institution — project context and CRISP-DM framework |
-| **GitHub Copilot** | AI coding assistant — code generation, refactoring, and documentation writing |
-| **ChatGPT (OpenAI)** | Research assistant — ideas, conceptual explanations, and background research material |
-| **VS Code** | Primary development environment — notebook editing, debugging, and source code management |
+| **Pieter Zielstra** | Mentor and Study Coach - guidance throughout the project lifecycle |
+| **Deepak Tunuguntla** | Mentor and Study Coach - feedback on methodology and implementation |
+| **Saxion University of Applied Sciences** | Academic institution - project context and CRISP-DM framework |
+| **GitHub Copilot** | AI coding assistant - code generation, refactoring, and documentation writing |
+| **ChatGPT (OpenAI)** | Research assistant - ideas, conceptual explanations, and background research material |
+| **VS Code** | Primary development environment - notebook editing, debugging, and source code management |
 | **GitHub** | Version control and project hosting |
 | **Anaconda** | Python distribution and package/environment management (`conda`) |
-| **scikit-learn** | Machine learning library — model training and evaluation utilities |
-| **XGBoost** | Gradient boosting library — XGBRegressor model |
-| **Kaggle** | Dataset source — original 1,000-match Valorant game statistics dataset |
-| **Riot Games / Valorant** | Game and domain — official agent roster used to build the Agent Master List |
+| **scikit-learn** | Machine learning library - model training and evaluation utilities |
+| **XGBoost** | Gradient boosting library - XGBRegressor model |
+| **Kaggle** | Dataset source - original 1,000-match Valorant game statistics dataset |
+| **Riot Games / Valorant** | Game and domain - official agent roster used to build the Agent Master List |

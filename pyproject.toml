@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "valorant-predictor"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    # Notebook environment
+    "jupyterlab",
+    "jupyter",
+    "ipywidgets",
+
+    # Data handling
+    "numpy",
+    "pandas",
+
+    # Visualisation
+    "matplotlib",
+    "seaborn",
+
+    # Machine learning
+    "scikit-learn",
+    "xgboost",
+    "scipy",
+
+    # Model persistence
+    "joblib",
+
+    # Dev utilities
+    "python-dotenv",
+]
