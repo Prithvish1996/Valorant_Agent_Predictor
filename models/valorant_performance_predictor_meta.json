@@ -1,0 +1,19 @@
+{
+  "model_name": "Random Forest",
+  "features": [
+    "agent",
+    "role",
+    "avg_dmg_delta",
+    "win_loss_margin",
+    "kills",
+    "deaths"
+  ],
+  "cat_cols": [
+    "agent",
+    "role"
+  ],
+  "target": "performance",
+  "test_mae": 0.8913,
+  "test_rmse": 1.3888,
+  "test_r2": 0.6507
+}

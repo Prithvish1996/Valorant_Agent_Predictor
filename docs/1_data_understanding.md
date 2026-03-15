@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes the Data Understanding phase of the Valorant Agent Predictor project. In this step of CRISP-DM, we answer three simple questions:
+This document summarizes the Data Understanding phase of the Valorant Player Performance Predictor project. In this step of CRISP-DM, we answer three simple questions:
 
 - What data do we have?
 - How good is it?
@@ -19,9 +19,8 @@ We work with two datasets that capture complementary views of Valorant gameplay:
 - **Player Game Dataset** (`valorant_games_messy.csv`): 1,296 single-player match records. Each row describes one player's performance in a single match, with metrics (kills, deaths, assists, KDR, avg_dmg, ACS, round_wins, round_losses) and context (agent, map, rank, match_date, outcome). Shape before enrichment: (1296, 19).
 - **Agent Master List** (`agent_master_list.csv`): reference table of 27 agents and their roles (Duelist, Initiator, Controller, Sentinel).
 
-These are merged into a single **player_game_data** dataset (`player_game_data.csv`) by joining on agent name. The merged dataset has 1,296 rows and 20 columns and adds a `role` feature to each player-game record.
+These are merged into a single **player_game_data** dataset (`data/interim/player_game_data.csv`) by joining on agent name. The merged dataset has 1,296 rows and 20 columns and adds a `role` feature to each player-game record.
 
-Merging is essential because it links raw performance to the strategic archetype of the chosen agent, which is exactly what we want to predict and explain.
 
 ---
 
@@ -132,8 +131,8 @@ The next phase will operationalize what we learned here:
 - Handle missing values in `role` column using **mode**.
 - Replace `'UnknownAgent'` values in `agent` column with **mode**.
 - Fix or remove negative values in kills, deaths, round_wins, round_losses, and kdr.
-- Encode categorical variables (agent, map, rank, role) for modeling.
-- Scale numeric features using a method such as standardization.
+- Encode categorical variables (agent, map, rank, role) before modeling.
+
 
 We also plan some targeted feature engineering:
 
@@ -144,9 +143,6 @@ We also plan some targeted feature engineering:
 
 ## 7. Summary and Next Steps
 
-We now have a clear picture of our data: a merged dataset of 1,296 single-player matches and 20 features, combining detailed performance metrics with contextual and role information. The main strengths are the richness of performance data and the added role context; the main weaknesses are numeric anomalies, inconsistent outcomes, and strong class imbalance for agents and roles.
+We now have a clear understanding of our dataset. It contains 1,296 single-player matches with 20 features, combining detailed performance statistics with role and context information. The main strengths of the dataset are the variety of performance metrics and the additional role information. However, there are also some challenges, such as unusual numeric values, inconsistent outcomes, and an imbalance in the number of matches for different agents and roles.
 
-Overall, the dataset is suitable for moving forward, provided we invest in a solid Data Preparation phase. The next steps in CRISP-DM will be to clean and transform the data, build initial classification models for agent prediction, and evaluate them with metrics that respect the underlying imbalance (e.g., weighted F1 and Top-3 accuracy).
-
-This document serves as the reference point for those later decisions, capturing what we know about the data before we start changing it.
-
+This document acts as a starting point for the next steps. It records what we currently know about the dataset before we begin cleaning or modifying it.
